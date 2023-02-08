@@ -10,7 +10,6 @@ const Modal = ({
   isSelected,
   roboto,
 }) => {
-    //const [isSelected, setSelection] = useState(false);
   return (
     <NewModal animationType="fade" transparent={true} visible={isVisible}>
       <View style={styles.modalContainer}>
@@ -23,8 +22,7 @@ const Modal = ({
           </View>
           <Text style={{...styles.label, ...roboto}}>¿Quiéres completar la tarea?</Text>
           <Checkbox
-          //value={isSelected}
-          //onValueChange={onChangeColor}
+
           value={isSelected}
           onValueChange={onChangeColor}
           style={styles.checkbox}

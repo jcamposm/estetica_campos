@@ -6,7 +6,7 @@ import Checkbox from 'expo-checkbox';
 import FinishScreen from '../screens/FinishScreen'
 import FinishList from './FinishList'
 
-const ProductsItemList = () => {
+const OptimizedList = () => {
 
   const [textItem, setTextItem] = useState("")
   const [list, setList] = useState([])
@@ -20,7 +20,6 @@ const ProductsItemList = () => {
   }
 
   const onChangeColor = (item) => {
-//setItemSelected(item)
 setSelection(item)
 setComplete()
 
@@ -28,7 +27,6 @@ setComplete()
 
   const addItem = () => {
     setList(prevState => [...prevState, textItem])
-    //setList(const object={...list, select: 'false'})
     setTextItem("")
   }
 
@@ -119,7 +117,7 @@ keyExtractor={item => item}
   )
 }
 
-export default ProductsItemList
+export default OptimizedList
 
 const styles = StyleSheet.create({
   container: {
