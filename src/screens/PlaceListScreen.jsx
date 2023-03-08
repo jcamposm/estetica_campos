@@ -6,12 +6,12 @@ import PlaceItem from '../components/PlaceItem'
 const PlaceListScreen = ({navigation})=>{
     const places = useSelector(state => state.places.places)
   
-    const renderItem = (item) => (
+    const renderItem = ({item}) => (
     <PlaceItem
     title={item.title}
     image={item.image}
     address="123 Street, city, country"
-    onSelect={() => navigation.navigate("Direcciones")}/>
+    onSelect={() => navigation.navigate("PlacesTab")}/>
     )
   return (
     <View>
