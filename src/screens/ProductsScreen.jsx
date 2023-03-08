@@ -3,10 +3,7 @@ import { StyleSheet, FlatList } from "react-native"
 import ProductsItem from "../components/ProductsItem"
 
 import { useSelector, useDispatch } from "react-redux"
-import {
-  selectedProduct,
-  filteredProduct,
-} from "../store/actions/products.action"
+import { selectedProduct, filteredProduct, } from "../store/actions/products.action"
 
 const ProductsScreen = ({ navigation, route }) => {
   const dispatch = useDispatch()

@@ -1,8 +1,11 @@
-import { Button, StyleSheet, Text, View } from "react-native"
+import { Button, StyleSheet, Text, View, } from "react-native"
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { addItem } from "../store/actions/cart.action"
+//import ImageSelector from "../components/ImageSelector"
+import {COLORS} from "../constants/colors"
+import NewPlaceScreen from "./NewPlaceScreen"
 
 const DetailsScreen = ({ navigation, route }) => {
   const dispatch = useDispatch()
@@ -17,11 +20,16 @@ const DetailsScreen = ({ navigation, route }) => {
   }
 
   return (
+    
     <View style={styles.container}>
       <Text>{service.name}</Text>
       <Text>{service.description}</Text>
       <Text>{service.price}</Text>
-      <Button title="Añadir al carrito" onPress={handleAddItem} />
+      <View style = {styles.lineStyle} />
+      <Button title="Añadir al carrito" 
+      color={COLORS.terciary}
+      onPress={handleAddItem} />
+      <NewPlaceScreen />
     </View>
   )
 }
@@ -34,4 +42,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  lineStyle:{
+    borderWidth: 0.5,
+    width: "80%",
+    borderColor:"black",
+    margin:10,
+  }
 })
