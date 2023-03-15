@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View, } from "react-native"
+import { Button, StyleSheet, Text, View,} from "react-native"
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
