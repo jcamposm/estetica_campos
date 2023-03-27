@@ -28,12 +28,21 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-  
-    },
-    "permissions": ["CAMERA", "ACCES_FINE_LOCATION", "WRITE_EXTERNAL_STORAGE"]
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCES_FINE_LOCATION",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1293bf63-9d2d-4f32-b0c3-5f2051128ecd"
+      }
+    },
+    "owner": "pumpjc"
   }
 }
