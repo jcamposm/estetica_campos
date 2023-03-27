@@ -10,17 +10,16 @@ const CategoriesItem = ({ item, onSelected }) => {
         style={styles.container}
         onPress={() => onSelected(item)}
       >
-        <View style={styles.textContainer}>
-          <Text>{item.title}</Text>
-        </View>
-        <View style={styles.imageContainer}>
-          <Image
+      <Image
             style={styles.image}
             source={{
               uri: item.img,
             }}
           />
+        <View style={styles.textContainer}>
+          <Text style={{color: "white",}}>{item.title}</Text>
         </View>
+        
       </TouchableOpacity>
     </View>
   )
@@ -37,28 +36,28 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
     elevation: 5,
+    width: 170,
   },
   container: {
-    flexDirection: "row",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingLeft: 15,
+    flexDirection: "column",
   },
   textContainer: {
-    width: "60%",
-    height: "100%",
     justifyContent: "center",
     alignItems: "center",
   },
   imageContainer: {
-    width: "40%",
-    height: "100%",
+    width: "100%",
+    marginLeft: -15,
+
+
   },
   image: {
-    width: "100%",
-    height: "100%",
+    width:170,
+    height: 120,
     borderTopRightRadius: 10,
-    borderBottomRightRadius: 10,
+    borderTopLeftRadius: 10,
   },
 })

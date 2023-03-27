@@ -1,5 +1,5 @@
 import React, {useLoayoutEffect, useEffect, useLayoutEffect} from 'react'
-import{FlatList, View, Text, Button} from 'react-native'
+import{FlatList, View, Text, Button, StyleSheet, ScrollView} from 'react-native'
 import {useSelector, useDispatch} from 'react-redux'
 import PlaceItem from '../components/PlaceItem'
 
@@ -17,19 +17,30 @@ const PlaceListScreen = ({navigation})=>{
     <PlaceItem
     title={item.title}
     image={item.image}
-    address="123 Street, city, country"
-    onSelect={() => navigation.navigate("PlacesTab")}/>
+    address={'Foto para evaluación de servicio'}
+    onSelect={() => navigation.navigate("PlacesTab")}
+    />
     )
   return (
-    <View>
+    <ScrollView>
+    <View style={styles.container}>
     <FlatList
     data={places}
     keyExtractor = {item => item.id}
     renderItem={renderItem}
+    inverted={true}
+
     />
-    <Button title="BOTON "onPress={console.log(places)}/>
     </View>
+    </ScrollView>
   )
   }
+
+  const styles = StyleSheet.create({
+    container: {
+    flex: 1,
+    height: 600,
+    },
+  })
 
   export default PlaceListScreen

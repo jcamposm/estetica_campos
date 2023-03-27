@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import CategoriesScreen from "../screens/CategoriesScreen"
 import ProductScreen from "../screens/ProductsScreen"
 import DetailsScreen from "../screens/DetailsScreen"
+import GalleryScreen from "../screens/GalleryScreen"
+import UsScreen from "../screens/UsScreen"
 
 const Stack = createNativeStackNavigator()
 
@@ -22,7 +24,7 @@ export default ShopNavigator = () => {
         name="Categories"
         component={CategoriesScreen}
         options={{
-          title: "Mi estética Online",
+          title: "Bodylicious - Estética Integral"
         }}
       />
       <Stack.Screen
@@ -38,6 +40,18 @@ export default ShopNavigator = () => {
         options={({ route }) => ({
           title: route.params.name,
         })}
+      />
+      <Stack.Screen
+        name="Gallery"
+        component={GalleryScreen}
+        options={{title: "Galería",
+        }}
+      />
+      <Stack.Screen
+        name="Us"
+        component={UsScreen}
+        options={{title: "Quiénes Somos",
+        }}
       />
     </Stack.Navigator>
   )

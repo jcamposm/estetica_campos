@@ -1,4 +1,4 @@
-import {ADD_PLACE, LOAD_PLACES} from "../actions/places.action"
+import {ADD_PLACE, LOAD_PLACES, REMOVE_PLACES} from "../actions/places.action"
 
 import Place from "../../models/Place"
 
@@ -25,6 +25,7 @@ const PlacesReducer = (state = initialState, action) => {
                 item.image
             ))
         }
+      
         default:
             return state
     }

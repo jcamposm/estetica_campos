@@ -1,8 +1,10 @@
 import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { COLORS } from '../constants/colors.js'
+import Ionicons from "@expo/vector-icons/Ionicons"
 
-const PlaceItem = ({title, image, address, onSelect}) => {
+
+const PlaceItem = ({title, image, address, onSelect,}) => {
   return (
     <TouchableOpacity
     onPress={onSelect}

@@ -1,1 +1,1 @@
-export const URL_API = "https://app-estetica-eb1c1-default-rtdb.firebaseio.com/"
+export const URL_API = "https://final-coder-7b245-default-rtdb.firebaseio.com/"

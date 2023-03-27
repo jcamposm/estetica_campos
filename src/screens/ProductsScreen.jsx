@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { StyleSheet, FlatList } from "react-native"
+import { StyleSheet, FlatList, View } from "react-native"
 import ProductsItem from "../components/ProductsItem"
 
 import { useSelector, useDispatch } from "react-redux"
@@ -22,16 +22,18 @@ const ProductsScreen = ({ navigation, route }) => {
   }
 
   const renderProductItem = ({ item }) => (
-    <ProductsItem style={styles.productsContainer} item={item} onSelected={handleSelectedProduct} />
+    <ProductsItem item={item} onSelected={handleSelectedProduct} />
   )
 
   return (
+    <View style={styles.container}>
     <FlatList 
       data={categoryProducts}
       renderItem={renderProductItem}
       keyExtractor={item => item.id}
       numColumns={2}
     />
+    </View>
   )
 }
 
@@ -40,11 +42,15 @@ export default ProductsScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: "row", 
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    backgroundColor: "white"
+
   },
   productsContainer: {
-    height: 150,
-    width: 150,
+    height: 100,
+    width: 10,
+    padding: 10,
   },
 })

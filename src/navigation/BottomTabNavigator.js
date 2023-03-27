@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text } from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import Ionicons from "@expo/vector-icons/Ionicons"
+import { COLORS } from "../constants/colors"
 
 import ShopNavigator from "./ShopNavigator"
 import CartNavigator from "./CartNavigator"
@@ -25,8 +26,8 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View style={styles.icon}>
-              <Ionicons name="home" size={25} color="black" />
-              <Text>Tienda</Text>
+              <Ionicons name="home" size={25} color="white" />
+              <Text style={styles.Text}>Tienda</Text>
             </View>
           ),
         }}
@@ -37,8 +38,8 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View style={styles.icon}>
-              <Ionicons name="cart" size={25} color="black" />
-              <Text>Carrito</Text>
+              <Ionicons name="cart" size={25} color="white" />
+              <Text style={styles.Text}>Carrito</Text>
             </View>
           ),
         }}
@@ -49,8 +50,8 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View style={styles.icon}>
-              <Ionicons name="list" size={25} color="black" />
-              <Text>Ordenes</Text>
+              <Ionicons name="list" size={25} color="white" />
+              <Text style={styles.Text}>Ordenes</Text>
             </View>
           ),
         }}
@@ -61,8 +62,8 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View style={styles.icon}>
-              <Ionicons name="image" size={25} color="black" />
-              <Text>Mis fotos</Text>
+              <Ionicons name="image" size={25} color="white" />
+              <Text style={styles.Text}>Mis fotos</Text>
             </View>
           ),
         }}
@@ -74,7 +75,7 @@ export default BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: "#fff",
+    backgroundColor: COLORS.primary,
     paddingTop: 15,
     borderTopEndRadius: 30,
     borderTopStartRadius: 30,
@@ -90,5 +91,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-  },
+    color: "#fff",
+  }, Text:{
+    color: "white",
+  }
 })

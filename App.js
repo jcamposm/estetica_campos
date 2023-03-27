@@ -6,6 +6,7 @@ import { Provider } from "react-redux"
 import store from "./src/store"
 
 import {init} from './src/db/'
+import CarouselScreen from "./src/screens/CarouselScreen"
 
 init()
 .then(()=> console.log('Database initialized'))

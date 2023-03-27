@@ -60,7 +60,7 @@ marginBottom: 10,
 },
 preview: {
     width:"100%",
-    height: 200,
+    height: 100,
     marginBottom: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -68,7 +68,7 @@ preview: {
     borderWidth: 1,
 },
 image: {
-    width: 200,
-    height: 200,
+    width: "100%",
+    height: 100,
 }
 })

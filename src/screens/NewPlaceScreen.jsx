@@ -20,16 +20,14 @@ const NewPlaceScreen = ({navigation}) => {
     
 
   return (
-    <ScrollView>
         <View style={styles.container}>
             <Text style={styles.label}>Añadir foto para evaluación</Text>
             <TextInput style={styles.input} placeholder="Descripción"
             value={title}
             onChangeText={handleTitleChange}/>
              <ImageSelector onImage={setImage}/>
-            <Button title="Guardar foto" color={COLORS.terciary} onPress={handleSave}/>
+            <Button title="Subir foto" color={COLORS.terciary} onPress={handleSave}/>
         </View>
-    </ScrollView>
   )
 }
 
@@ -38,14 +36,21 @@ export default NewPlaceScreen
 const styles = StyleSheet.create({
     container:{
         margin: 30,
+        borderWidth: 1,
+        borderColor: "#ccc",
+        padding: 10,
+        borderRadius: 10,
+        width: 300,
     }, label: {
-        fontSize: 18,
-        marginBottom: 16,
+        fontSize: 14,
+        fontFamily: "RobotoBold",
+        marginBottom: 10,
+        textAlign: "center",
     }, input: {
-        borderBottomColor: '#ccc',
-        borderBottomWidth: 1,
+        borderColor: '#ccc',
+        borderWidth: 1,
         marginBottom: 16,
-        pagginHorizontal: 2,
-        paddingVertical: 4,
+        padding: 2,
+        paddingLeft: 5,
     }
 })
